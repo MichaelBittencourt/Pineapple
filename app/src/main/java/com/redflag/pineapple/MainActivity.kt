@@ -47,6 +47,10 @@ fun LoginUi() {
 //                    Image(imageVector = ImageVector.vectorResource(id = R.drawable.ic_pineapple),
 //                        contentDescription = stringResource(id = R.string.ic_pineapple_description),
 //                    modifier = Modifier.centerContent().width(256.dp), colorFilter = ColorFilter.tint(color = MaterialTheme.colorScheme.onSurfaceVariant))
+                    Icon(painter = painterResource(id = R.drawable.ic_pineapple),
+                        contentDescription = stringResource(id = R.string.ic_pineapple_description),
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.centerContent().width(256.dp)
+                    )
 //                    Image(painter = painterResource(id = R.drawable.ic_pineapple),
 //                        contentDescription = stringResource(id = R.string.ic_pineapple_description),
 //                        modifier = Modifier
