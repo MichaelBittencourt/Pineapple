@@ -1,6 +1,7 @@
 package com.redflag.pineapple.ui.theme
 
 
+import android.content.res.Resources
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.lightColorScheme
@@ -98,6 +99,9 @@ fun SplashTheme(
         DarkColors
     }
 
-
+    MaterialTheme(
+        colorScheme = colors,
+        content = content,
+    )
 
 }

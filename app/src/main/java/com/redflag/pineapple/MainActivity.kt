@@ -21,6 +21,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.google.android.gms.common.SignInButton
 import com.redflag.pineapple.ui.theme.PineappleTheme
 import com.redflag.pineapple.util.centerContent
@@ -28,6 +29,7 @@ import com.redflag.pineapple.util.centerContent
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        installSplashScreen()
         setContent {
             PineappleTheme {
                 LoginUi()
@@ -44,19 +46,12 @@ fun LoginUi() {
                 Column(verticalArrangement = Arrangement.Bottom, modifier = Modifier
                     .centerContent()
                     .weight(2f)) {
-//                    Image(imageVector = ImageVector.vectorResource(id = R.drawable.ic_pineapple),
-//                        contentDescription = stringResource(id = R.string.ic_pineapple_description),
-//                    modifier = Modifier.centerContent().width(256.dp), colorFilter = ColorFilter.tint(color = MaterialTheme.colorScheme.onSurfaceVariant))
-                    Icon(painter = painterResource(id = R.drawable.ic_pineapple),
+                    Image(painter = painterResource(id = R.drawable.ic_pineapple),
                         contentDescription = stringResource(id = R.string.ic_pineapple_description),
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.centerContent().width(256.dp)
-                    )
-//                    Image(painter = painterResource(id = R.drawable.ic_pineapple),
-//                        contentDescription = stringResource(id = R.string.ic_pineapple_description),
-//                        modifier = Modifier
-//                            .centerContent()
-//                            .width(256.dp), colorFilter = ColorFilter.tint(color = MaterialTheme.colorScheme.onSurfaceVariant))
-                    Text(text = "Bem-vindo ao Pineapple", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 24.sp, fontWeight = FontWeight.Bold, modifier = Modifier.centerContent())
+                        modifier = Modifier
+                            .centerContent()
+                            .width(256.dp), colorFilter = ColorFilter.tint(color = MaterialTheme.colorScheme.onSurfaceVariant))
+//                    Text(text = "Bem-vindo ao Pineapple", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 24.sp, fontWeight = FontWeight.Bold, modifier = Modifier.centerContent())
                 }
                 Column(
                     modifier = Modifier
@@ -69,7 +64,7 @@ fun LoginUi() {
                         SignInButton(it).apply {
                             this.setSize(SignInButton.SIZE_WIDE)
                             this.setOnClickListener{
-
+                                //Logar com o Google
                             }
                         }
                     })
@@ -79,12 +74,12 @@ fun LoginUi() {
 //                        Text(text = "Continue with Google")
 //                    }
                 }
-                Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.centerContent()) {
-                    Text(text = "Ainda não tem uma conta?", color = MaterialTheme.colorScheme.onSurfaceVariant)
-                    TextButton(onClick = { /*TODO*/ }) {
-                        Text(text = "Cadastre-se!")
-                    }
-                }
+//                Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.centerContent()) {
+//                    Text(text = "Ainda não tem uma conta?", color = MaterialTheme.colorScheme.onSurfaceVariant)
+//                    TextButton(onClick = { /*TODO*/ }) {
+//                        Text(text = "Cadastre-se!")
+//                    }
+//                }
             }
 
         }
