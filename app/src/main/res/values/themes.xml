@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Theme.MySplash" parent="Theme.SplashScreen">
-<!--        <item name="windowSplashScreenBackground">@android:color</item>-->
-        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_pineapple</item>
+<!--        <item name="windowSplashScreenBackground">@color/purple_200</item>-->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/avd_anim2</item>
+        <item name="android:windowSplashScreenAnimationDuration">1000</item>
+<!--        <item name="android:windowSplashScreenIconBackgroundColor">@color/white</item>-->
+        <item name="android:windowSplashScreenBrandingImage" >@drawable/ic_splashscreen_branding_centered</item>
+
         <item name="postSplashScreenTheme">@style/Theme.Pineapple</item>
     </style>
+    <style name="Theme.Test" parent="Theme.SplashScreen">
+<!--        <item name="android:windowSplashScreenBackground">@color/purple_500</item>-->
+        <item name="android:windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
+        <item name="android:windowSplashScreenAnimationDuration">1000</item>
+
+        <item name="postSplashScreenTheme">@style/Theme.Pineapple</item>
+    </style>
+
     <style name="Theme.Pineapple" parent="android:Theme.Material.Light.NoActionBar" />
 </resources>
